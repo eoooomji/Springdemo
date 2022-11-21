@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Controller -->
+	<bean class="controller.IndexController" />
+	<bean class="controller.Menu1Controller" />
+	<bean class="controller.Menu2Controller" />
+	<bean class="controller.DetailsController" />
+	
+	<!-- tiles -->
+	<bean class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+		<property name="definitions">
+			<list>
+				<value>/WEB-INF/tiles.xml</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- Tiles View -->
+	<bean class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView" />
+		<property name="order" value="1"></property>
+	</bean>
+	
+	<!-- View -->
+	<!-- view는 우선순위를 설정할 수 있다. internal view는 제일 나중으로 우선순위를 둔다. -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+		<!-- order : 우선순위를 설정할 수 있다. -->
+		<property name="order" value="2" />
+	</bean>
+</beans>

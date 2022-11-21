@@ -7,7 +7,7 @@
 	
 	<!-- 공통된 데이터 소스를 넣어놓는 공간 -->
 
-	<!-- [1] DataSource 빈 선언 -->
+	<!-- [0] DataSource 빈 선언 -->
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName"
@@ -18,7 +18,7 @@
 		<property name="password" value="a1234" />
 	</bean>
 
-	<!-- [6] View 빈 선언 -->
+	<!-- [10] View 빈 선언 -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/" />

@@ -30,6 +30,38 @@
 		<url-pattern>*.st</url-pattern>
 	</servlet-mapping>
 	
+	<!-- Processes application requests -->
+	<servlet>
+		<servlet-name>twoServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring/appServlet/dispatch-two.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+		
+	<servlet-mapping>
+		<servlet-name>twoServlet</servlet-name>
+		<url-pattern>*.ss</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Processes application requests -->
+	<servlet>
+		<servlet-name>threeServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring/appServlet/dispatch-three.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+		
+	<servlet-mapping>
+		<servlet-name>threeServlet</servlet-name>
+		<url-pattern>*.se</url-pattern>
+	</servlet-mapping>
+	
 	<!-- 한글을 처리해주기 위한 방법 -->
 	<filter>
 		<filter-name>encodingFilter</filter-name>
