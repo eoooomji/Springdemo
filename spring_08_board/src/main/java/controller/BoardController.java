@@ -3,11 +3,11 @@ package controller;
 import org.springframework.stereotype.Controller;
 
 import dto.PageDTO;
-import service.BoaderService;
+import service.BoardService;
 
 @Controller
 public class BoardController {
-	private BoaderService service;
+	private BoardService service;
 	private PageDTO pdto;
 	private int currentpage;
 	
