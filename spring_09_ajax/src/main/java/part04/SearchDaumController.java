@@ -45,6 +45,7 @@ public class SearchDaumController {
 		String total = "";
 		while ((input = reader.readLine()) != null) {
 			total += input;
+			
 		}
 		System.out.println(total);
 		return total;
